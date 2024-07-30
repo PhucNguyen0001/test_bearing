@@ -15,13 +15,13 @@ def search(d_bore=None, d_outside=None, b=None):
         return None
     records = df
     if d_bore:
-        records = df[df['d bore'] == float(d_bore)]
+        records = records[records['d bore'] == float(d_bore)]
 
     if d_outside:
-        records = df[df['D outside'] == float(d_outside)]
+        records = records[records['D outside'] == float(d_outside)]
 
     if b:
-        records = df[df['B'] == float(b)]
+        records = records[records['B'] == float(b)]
 
     return records.to_dict(orient='records')
 

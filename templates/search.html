@@ -12,9 +12,9 @@
 <body>
 <h1>Tìm vòng bi</h1>
 <form action="/search" method="get">
-    <input class="form-control" type="number" placeholder="d" aria-label="default input example" name="d bore">
-    <input class="form-control" type="number" placeholder="D" aria-label="default input example" name="D outside">
-    <input class="form-control" type="number" placeholder="B" aria-label="default input example" name="B">
+    <input class="form-control" type="text" placeholder="d" aria-label="default input example" name="d bore">
+    <input class="form-control" type="text" placeholder="D" aria-label="default input example" name="D outside">
+    <input class="form-control" type="text" placeholder="B" aria-label="default input example" name="B">
     <button type="submit" class="btn btn-primary">Tìm kiếm</button>
 </form>
 {% if result %}
@@ -44,4 +44,5 @@
 <h2>Không tìm thấy vòng bi</h2>
 {% endif %}
 </body>
+<script src="{{ url_for('static', filename='js/bearing.js') }}"></script>
 </html>
